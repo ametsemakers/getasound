@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page Demo</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class="container-fuid">
+            <div class="row zone1">
+                <div class="col-12 offset-md-2">
+                    <h1>Parlez nous de votre cible</h1>
+                </div>
+            </div>
+            <div class="row bg-light zone2">
+                <div class="col-1 offset-2">
+                    <h2 class="gris">Cible</h2>
+                </div>
+            </div>
+            <div class="row bg-light zone3">
+                <div class="col-12 offset-2">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-lg bg-white btn-default selected" onclick="b2b()" id="cible1">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="font_vign">B2B</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="./images/factory.png" alt="factory" class="w-75" >
+                                </div>
+                            </div> 
+                        </button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-lg bg-white btn-default ml-4" onclick="b2c()" id="cible2">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="font_vign">B2C</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="./images/factory.png" alt="factory" class="w-75" >
+                                </div>
+                            </div> 
+                        </button>                    
+                    </div>
+                </div>
+            </div>
+
+            <!--            La zone B2B caché-->
+
+            <div class="zoneCache1" id="zoneCache1">
+                <div class="row bg-light">
+                    <div class="col-1 offset-2">
+                        <h2 class="gris">B2B</h2>
+                    </div>
+                </div>
+                <div class="row bg-light">
+                    <div class="col-12 offset-2">
+                        <div class="btn-group btn_ico" role="group">
+                            <div class="row mt-3">    
+                                <div class="col-12">
+                                    <label for="b2b_1" class="font_vign" style="margin-left: 12px">Entreprise</label>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-default bg-white" onclick="select()"><img src="./images/boy.png" alt="boy" class="w-100" id="b2b_1"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group btn_ico" role="group">
+                            <div class="row mt-3">    
+                                <div class="col-12">
+
+                                    <label for="b2b_2" class="font_vign" style="margin-left: 6px">Association</label>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-default bg-white" onclick="select()"><img src="./images/boy.png" alt="boy" class="w-100" id="b2b_2"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group btn_ico" role="group">
+                            <div class="row mt-3">    
+                                <div class="col-12">
+                                    <label for="b2b_3" class="font_vign" style="margin-left: 24px">Public</label>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-default bg-white" onclick="select()"><img src="./images/boy.png" alt="boy" class="w-100" id="b2b_3"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group btn_ico" role="group">
+                            <div class="row mt-3">    
+                                <div class="col-12">
+                                    <label for="b2b_4" class="font_vign" style="margin-left: 22px">Autres</label>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-default bg-white" onclick="select()"><img src="./images/boy.png" alt="boy" class="w-100" id="b2b_4"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bg-light">
+                    <div class="col-10 offset-1 col-sm-9 offset-md-2 col-lg-6 col-xl-5">
+                        <p class="gris mt-5">Plus d'informations</p>
+                        <p class="text-right blue" id="total0">123 mots</p>
+                        <form>
+                            <div class="form-group mb-5">
+                                <textarea id="text0" onkeyup="count();" class="form-control" rows="2"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!--            La zone B2C caché-->
+
+            <div class="zoneCache2" id="zoneCache2">
+                <div class="row bg-light">
+                    <div class="col-1 offset-2">
+                        <h2 class="gris">B2C</h2>
+                    </div>
+                </div>
+                <div class="row bg-light">
+                    <div class="col-12 offset-2">
+                        <div class="btn-group btn_ico" role="group">
+
+                            <div class="row mt-3">    
+                                <div class="col-12">
+                                    <label for="b2c_1" class="font_vign" style="margin-left: 21px">Homme</label>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-default bg-white" onclick="select2()"><img src="./images/boy.png" alt="boy" class="w-100" id="b2c_1"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group btn_ico" role="group">
+                            <div class="row mt-3">    
+                                <div class="col-12">
+                                    <label for="b2c_2" class="font_vign" style="margin-left: 21px">Femme</label>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-default bg-white" onclick="select2()"><img src="./images/boy.png" alt="boy" class="w-100" id="b2c_2"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group btn_ico" role="group">
+                            <div class="row mt-3 media">    
+                                <div class="col-12">
+                                    <label for="b2c_3" class="font_vign" style="margin-left: 27px">Autre</label>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-default bg-white" onclick="select2()"><img src="./images/boy.png" alt="boy" class="w-100" id="b2c_3"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bg-light">
+                    <div class="col-10 offset-1 col-sm-9 offset-md-2 col-lg-6 col-xl-5">
+                        <p class="gris mt-5">Plus d'informations</p>
+                        <p class="text-right blue" id="total1">123 mots</p>
+                        <form>
+                            <div class="form-group mb-5">
+                                <textarea id="text1" onkeyup="count();" class="form-control" rows="2"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/getasound.js"></script>
+    </body>
+</html>

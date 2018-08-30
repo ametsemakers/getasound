@@ -1,0 +1,119 @@
+@font-face
+{ 
+    font-family: Roboto; src: url('Roboto-Regular.ttf'); 
+}
+
+.zone1
+{
+    height: 280px;
+}
+
+.zone1 h1
+{
+    margin-top: 100px;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+    font-size: 52px;   
+}
+
+.zone2
+{
+    height: 100px;
+    margin-top: 20px;
+}
+
+.zone2 h2
+{
+    margin-top: 40px;
+}
+
+/* pour tous les textes grises */
+
+.gris
+{
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    color: #6d6d6d;
+}
+
+.zone3
+{
+    height: 150px;
+}
+
+/* style pour les boutons principales */
+
+.zone3 button
+{
+    width: 100px !important;
+    height: 100px !important;
+    -webkit-box-shadow: 0px 1px 15px -2px rgba(153,153,153,1);
+    -moz-box-shadow: 0px 1px 15px -2px rgba(153,153,153,1);
+    box-shadow: 0px 1px 15px -2px rgba(153,153,153,1);
+}
+
+/* style alternative pour les boutons principales */
+
+.selected
+{
+    border: solid 3px rgba(3, 169, 244, 0.23);
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.zoneCache1 .zoneCache2
+{
+    height: 800px;
+}
+
+.zoneCache1 button, .zoneCache2 button
+{
+    border: solid 1px #e2e2e2;
+    width: 90px !important;
+    height: 90px !important;
+
+}
+
+/* reduire la largeur des boutons dans les zones chachés */
+
+.btn_ico
+{
+    width: 140px !important;
+}
+
+.btn_ico label
+{
+    width: 140px !important;
+}
+
+/* styler le texte sur les boutons cachés */
+
+.font_vign
+{
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+}
+
+
+/* couleur input */
+
+.blue
+{
+    font-family: Roboto, sans-serif;
+    color: #0000ff;
+}
+
+
+/*************************** MEDIA QUERIES ********************************/
+
+/* pour centrer le troisième icone dans b2c sur mobile */
+
+@media only screen and (max-width: 450px) 
+{
+    .media
+    {
+        margin-left: 55px;
+    }
+}
